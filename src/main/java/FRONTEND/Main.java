@@ -1,3 +1,4 @@
+package FRONTEND;
 
 import java.awt.EventQueue;
 import java.sql.SQLException;

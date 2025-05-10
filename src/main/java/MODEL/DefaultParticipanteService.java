@@ -1,5 +1,5 @@
 package BACKEND;
-import BACKEND.Participante;
+import MODEL.Participante;
 import PERSISTENCE.ParticipanteRepository;
 
 public class DefaultParticipanteService implements ParticipanteService {
@@ -10,10 +10,9 @@ public class DefaultParticipanteService implements ParticipanteService {
     }
 
     @Override
-    public void registrar(Participante participante) throws Exception {
-        if (!participante.esValido()) {
-            throw new IllegalArgumentException(participante.mensajeDeError());
-        }
+    public void registrar(String nombre, String telefono, String region) throws Exception {
+        Participante participante = new Participante(nombre, telefono, region);
         repo.guardar(participante);
     }
+
 }

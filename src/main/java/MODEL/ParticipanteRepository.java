@@ -1,5 +1,5 @@
 package PERSISTENCE;
-import BACKEND.Participante;
+import MODEL.Participante;
 import java.sql.SQLException;
 
 public interface ParticipanteRepository {
